@@ -20,19 +20,19 @@
 1. Build the snap
 
     ```bash
-snapcraft_wrapper
+    snapcraft_wrapper
     ```
 
 1. Install the snap
 
     ```bash
-sudo snap install --devmode cookiecutter_1.6.0_amd64.snap 
+    sudo snap install --devmode cookiecutter_1.6.0_amd64.snap 
     ```
 
 1. Execute cookiecutter
 
     ```bash
-cookiecutter
+    cookiecutter
     ```
 
 ## Other useful commands
