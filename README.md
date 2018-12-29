@@ -13,14 +13,14 @@ docker pull snapcore/snapcraft
 ```bash
 #!/bin/bash
 
-docker run --rm -v "$PWD":/build -w /build snapcore/snapcraft bash \
+sudo docker run --rm -v "$PWD":/build -w /build snapcore/snapcraft bash \
       -c "apt update && snapcraft $@"
 ```
 
 1. Build the snap
 
 ```bash
-sudo snapcraft_wrapper
+snapcraft_wrapper
 ```
 
 1. Install the snap
@@ -40,5 +40,5 @@ cookiecutter
 ### Clean snap
 
 ```bash
-sudo snapcraft_wrapper clean cookiecutter -s pull
+snapcraft_wrapper clean cookiecutter -s pull
 ```
