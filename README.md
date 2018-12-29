@@ -4,36 +4,36 @@
 
 1. Pull snapcraft
 
-```bash
+    ```bash
 docker pull snapcore/snapcraft
-```
+    ```
 
 1. Create wrapper script for snapcraft
 
-```bash
+    ```bash
 #!/bin/bash
 
 sudo docker run --rm -v "$PWD":/build -w /build snapcore/snapcraft bash \
       -c "apt update && snapcraft $@"
-```
+    ```
 
 1. Build the snap
 
-```bash
+    ```bash
 snapcraft_wrapper
-```
+    ```
 
 1. Install the snap
 
-```bash
+    ```bash
 sudo snap install --devmode cookiecutter_1.6.0_amd64.snap 
-````
+    ```
 
 1. Execute cookiecutter
 
-```bash
+    ```bash
 cookiecutter
-```
+    ```
 
 ## Other useful commands
 
