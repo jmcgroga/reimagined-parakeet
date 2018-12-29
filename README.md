@@ -5,16 +5,16 @@
 1. Pull snapcraft
 
     ```bash
-docker pull snapcore/snapcraft
+    docker pull snapcore/snapcraft
     ```
 
 1. Create wrapper script for snapcraft
 
     ```bash
-#!/bin/bash
-
-sudo docker run --rm -v "$PWD":/build -w /build snapcore/snapcraft bash \
-      -c "apt update && snapcraft $@"
+    #!/bin/bash
+    
+    sudo docker run --rm -v "$PWD":/build -w /build snapcore/snapcraft bash \
+          -c "apt update && snapcraft $@"
     ```
 
 1. Build the snap
