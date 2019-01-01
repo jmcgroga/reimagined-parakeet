@@ -11,7 +11,7 @@ confinement: devmode # use 'strict' once you have the right plugs and slots
 
 apps:
   cookiecutter:
-    command: cookiecutter
+    command: env PATH=$SNAP/usr/lib/git-core:$PATH cookiecutter
 
 parts:
   cookiecutter:
@@ -19,3 +19,7 @@ parts:
     source-tag: 1.6.0
     source-type: git
     plugin: python
+    stage-packages:
+      - libdb5.3
+      - git
+      - mercurial
